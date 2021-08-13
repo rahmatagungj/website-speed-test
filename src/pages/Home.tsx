@@ -53,7 +53,7 @@ const Home = () => {
                   disabled={isLoading}
                   className={`${
                     isLoading && "cursor-not-allowed"
-                  } mx-auto md:mx-0 w-32 text-center justify-center md:w-16 flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-lg hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2`}
+                  } mx-auto md:mx-0 w-32 text-center justify-center md:w-20 flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-lg hover:bg-blue-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2`}
                 >
                   {isLoading ? "Memuat" : "Cek"}
                 </button>
