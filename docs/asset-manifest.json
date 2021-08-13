@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/website-speed-test/static/css/main.3ed3623f.chunk.css",
-    "main.js": "/website-speed-test/static/js/main.eb566d5d.chunk.js",
-    "main.js.map": "/website-speed-test/static/js/main.eb566d5d.chunk.js.map",
+    "main.css": "/website-speed-test/static/css/main.b8dda9d4.chunk.css",
+    "main.js": "/website-speed-test/static/js/main.4231678b.chunk.js",
+    "main.js.map": "/website-speed-test/static/js/main.4231678b.chunk.js.map",
     "runtime-main.js": "/website-speed-test/static/js/runtime-main.228e4652.js",
     "runtime-main.js.map": "/website-speed-test/static/js/runtime-main.228e4652.js.map",
     "static/js/2.30b3112c.chunk.js": "/website-speed-test/static/js/2.30b3112c.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.50171629.chunk.js": "/website-speed-test/static/js/3.50171629.chunk.js",
     "static/js/3.50171629.chunk.js.map": "/website-speed-test/static/js/3.50171629.chunk.js.map",
     "index.html": "/website-speed-test/index.html",
-    "static/css/main.3ed3623f.chunk.css.map": "/website-speed-test/static/css/main.3ed3623f.chunk.css.map",
+    "static/css/main.b8dda9d4.chunk.css.map": "/website-speed-test/static/css/main.b8dda9d4.chunk.css.map",
     "static/js/2.30b3112c.chunk.js.LICENSE.txt": "/website-speed-test/static/js/2.30b3112c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.228e4652.js",
     "static/js/2.30b3112c.chunk.js",
-    "static/css/main.3ed3623f.chunk.css",
-    "static/js/main.eb566d5d.chunk.js"
+    "static/css/main.b8dda9d4.chunk.css",
+    "static/js/main.4231678b.chunk.js"
   ]
 }
