@@ -43,6 +43,7 @@ const Details = () => {
               siteData?.lighthouseResult.audits["final-screenshot"].details.data
             }
             width={400}
+            alt="final screenshot"
           />
         </div>
       </div>
