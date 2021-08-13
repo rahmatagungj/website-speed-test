@@ -18,8 +18,6 @@ const Home = () => {
     );
     setSiteData(response.data);
     setIsLoading(false);
-    console.log(response.data);
-
     history.push(`/${url.current?.value}`);
   };
 
