@@ -24,16 +24,16 @@ const Details = () => {
       {!siteData && <Redirect to="/" />}
       <div className="px-6 py-6 bg-blue-600 dark:bg-gray-800 md:py-12 md:px-12 lg:py-16 lg:px-16 xl:flex xl:items-center">
         <div className="xl:w-0 xl:flex-1">
-          <h2 className="text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl sm:leading-9">
+          <h2 className="break-words text-xl md:text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl sm:leading-9">
             {siteData?.lighthouseResult.finalUrl}
           </h2>
-          <p className="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
+          <p className="mt-3 max-w-3xl text-md md:text-lg leading-6 text-indigo-200">
             {siteData?.lighthouseResult.userAgent}
           </p>
-          <p className="text-sm leading-5 text-indigo-200">
+          <p className="text-xs md:text-sm leading-5 text-indigo-200">
             Fetch Data at {siteData?.lighthouseResult.fetchTime}
           </p>
-          <p className="text-sm leading-5 text-indigo-200">
+          <p className="text-xs md:text-sm leading-5 text-indigo-200">
             Lighthouse Version {siteData?.lighthouseResult.lighthouseVersion}
           </p>
         </div>

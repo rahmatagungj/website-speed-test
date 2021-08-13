@@ -14,6 +14,7 @@ const Home = () => {
   const history = useHistory();
   const HandleCheck = async () => {
     setIsLoading(true);
+    if (isError) setIsError(false);
     try {
       const response = await axios.get(
         `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url.current?.value}&key=${API_KEY}`
@@ -42,7 +43,7 @@ const Home = () => {
               </p>
               <div className="mt-10" />
               {isError && (
-                <div className="p-2">
+                <div className="p-2 justify-center flex flex-row">
                   <div className="inline-flex items-center leading-none text-white rounded-lg p-2 shadow text-teal text-sm">
                     <span className="inline-flex bg-red-600 text-white rounded-full h-6 px-3 justify-center items-center">
                       Gagal
