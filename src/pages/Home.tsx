@@ -16,9 +16,13 @@ const Home = () => {
     const response = await axios.get(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url.current?.value}&key=${API_KEY}`
     );
-    setSiteData(response.data);
-    setIsLoading(false);
-    history.push(`/${url.current?.value}`);
+    if (response) {
+      setSiteData(response.data);
+      setIsLoading(false);
+      history.push(`/${url.current?.value}`);
+    } else {
+      setIsLoading(false);
+    }
   };
 
   return (
