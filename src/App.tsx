@@ -1,12 +1,18 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import SiteProvider from "./contexts/siteContext";
+import Details from "./pages/Details";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       aaaa
-      </header>
-    </div>
+    <SiteProvider>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/:url" component={Details} />
+        </Switch>
+      </Router>
+    </SiteProvider>
   );
 }
 
