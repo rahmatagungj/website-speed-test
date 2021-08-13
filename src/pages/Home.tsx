@@ -9,18 +9,20 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const Home = () => {
   const { setSiteData } = React.useContext(siteContext);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [isError, setIsError] = React.useState<boolean>(false);
   const url = React.useRef<HTMLInputElement | null>(null);
   const history = useHistory();
   const HandleCheck = async () => {
     setIsLoading(true);
-    const response = await axios.get(
-      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url.current?.value}&key=${API_KEY}`
-    );
-    if (response) {
+    try {
+      const response = await axios.get(
+        `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url.current?.value}&key=${API_KEY}`
+      );
       setSiteData(response.data);
       setIsLoading(false);
       history.push(`/${url.current?.value}`);
-    } else {
+    } catch (e) {
+      setIsError(true);
       setIsLoading(false);
     }
   };
@@ -38,7 +40,20 @@ const Home = () => {
                 Semakin cepat loading website, semakin bagus nilai website Anda
                 di penilaian Google.
               </p>
-              <div className="flex flex-col md:flex-row md:items-start w-full mt-12 mx-auto justify-center lg:w-5/6">
+              <div className="mt-10" />
+              {isError && (
+                <div className="p-2">
+                  <div className="inline-flex items-center leading-none text-white rounded-lg p-2 shadow text-teal text-sm">
+                    <span className="inline-flex bg-red-600 text-white rounded-full h-6 px-3 justify-center items-center">
+                      Gagal
+                    </span>
+                    <span className="inline-flex px-2">
+                      Situs tidak ditemukan
+                    </span>
+                  </div>
+                </div>
+              )}
+              <div className="flex flex-col md:flex-row md:items-start w-full mx-auto justify-center lg:w-5/6">
                 <div className="relative md:mr-4 text-left lg:w-full xl:w-1/2 md:w-full">
                   <input
                     type="text"

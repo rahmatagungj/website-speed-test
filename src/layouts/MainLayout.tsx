@@ -6,7 +6,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <footer className="p-5 border-t-2 border-opacity-20">
         <div>
           <p className="text-center text-gray-200 dark:text-white">
-            © 2021- Rahmat Agung Julians
+            © 2021 - Rahmat Agung Julians
           </p>
         </div>
       </footer>
