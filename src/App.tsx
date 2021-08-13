@@ -6,7 +6,7 @@ import Details from "./pages/Details";
 function App() {
   return (
     <SiteProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/:url" component={Details} />
